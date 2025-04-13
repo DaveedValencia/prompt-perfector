@@ -206,22 +206,6 @@ st.sidebar.markdown("""
 * **Details make it special** - reflections, fog, glitter, textures
 """)
 
-# Examples collapsible section
-with st.expander("✨ Need inspiration? Try these examples"):
-    example_prompts = [
-        "A fox reading a book in the forest",
-        "Cyberpunk samurai on a motorcycle",
-        "A floating island with a castle and waterfalls",
-        "Astronaut in an underwater temple",
-        "Steampunk train station at sunset"
-    ]
-    
-    for example in example_prompts:
-        if st.button(example):
-            st.session_state.prompt_input = example
-            st.session_state.submitted = True
-            st.rerun()
-
 # Footer
 st.markdown("---")
 st.markdown("""
