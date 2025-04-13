@@ -79,7 +79,7 @@ def enhance_prompt(user_prompt):
 {
   "subject": "Main subject or character",
   "action": "What the subject is doing",
-  "style_or_medium": "Artistic style or rendering medium",
+  "style_or_medium": "Style or rendering medium (default to photorealistic unless user specifies otherwise)",
   "lighting_or_mood": "Lighting conditions or emotional tone",
   "camera_angle_or_composition": "Perspective or arrangement",
   "background_or_environment": "Setting or surroundings",
@@ -88,7 +88,9 @@ def enhance_prompt(user_prompt):
   "final_prompt": "Complete prompt combining all elements"
 }
 
-Parse any elements explicitly mentioned in the user's text. If a field is missing information, suggest a contextually appropriate value based on keywords or inferred theme. Build the final_prompt by combining all 8 fields into a natural language sentence, even if some values were auto-suggested. If an element cannot be reasonably inferred, leave it as an empty string.
+Parse any elements explicitly mentioned in the user's text. If a field is missing information, suggest a contextually appropriate value based on keywords or inferred theme. If the style_or_medium is not specified, default to photorealistic styles like "photorealistic", "high-definition photograph", or "hyperrealistic" rather than artistic styles. Only suggest artistic styles if the user explicitly mentions or implies them.
+
+Build the final_prompt by combining all 8 fields into a natural language sentence, even if some values were auto-suggested. If an element cannot be reasonably inferred, leave it as an empty string.
 
 The final_prompt should read as a cohesive description that could be submitted to an image generation AI."""},
                 {"role": "user", "content": f"Create an enhanced image prompt for: {user_prompt}"}
