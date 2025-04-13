@@ -53,7 +53,7 @@ A cowboy standing heroically with hands on hips, in a 3D render in the style of 
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/YourUsername/prompt-perfecter.git
+   git clone https://github.com/DaveedValencia/prompt-perfector.git
    cd prompt-perfecter
    ```
 
@@ -111,7 +111,7 @@ Contributions are welcome! Feel free to:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License
 
 ## 🙏 Acknowledgements
 
